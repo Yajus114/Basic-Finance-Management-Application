@@ -13,7 +13,7 @@ from googleapiclient.errors import HttpError
     2. Amount in the account
     3. Salary amount received
     4. Total amount in account (Amount in the account + Salary amount received)
-    5. Total amount to be saved in the account until next salary (20% of principal amount + salary)
+    5. Total amount to be saved in the account until next salary (20% of total amount in account)
     6. Spendable amount
 
     The finance manager will ask the user to enter the following details:
@@ -21,9 +21,7 @@ from googleapiclient.errors import HttpError
     2. Amount in the account
     3. Salary amount received
 
-    The starting date is 11th May 2024. The user will enter the date in the format "DD-MM-YYYY".
-    The app should start with the initial amount in the account as ₹7625.43 and the amount to be saved as 20% of this amount = ₹1526.086
-    The app should also round off the amount to be saved to the nearest integer value.
+    The app should round off the amount to be saved to the nearest integer value.
 """
 env = dotenv_values("secrets.env")
 
